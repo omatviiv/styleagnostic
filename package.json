@@ -1,7 +1,7 @@
 {
-  "name": "react-template",
+  "name": "themes-demo",
   "version": "1.0.0",
-  "description": "Preconfigured react template compatible with style agnostic components approach.",
+  "description": "demo project for themes and components with themes",
   "main": "dist/index.html",
   "scripts": {
     "build": "webpack -c ./webpack/prod.config.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omatviiv/react-template.git"
+    "url": "git+https://github.com/omatviiv/themes-demo.git"
   },
   "author": "Oleh Matviiv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/omatviiv/react-template/issues"
+    "url": "https://github.com/omatviiv/themes-demo/issues"
   },
-  "homepage": "https://github.com/omatviiv/react-template#readme",
+  "homepage": "https://github.com/omatviiv/themes-demo#readme",
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
     "@types/jest": "^29.2.6",
