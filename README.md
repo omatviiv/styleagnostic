@@ -8,8 +8,19 @@ become styleagnostic.
 # Deploy notes
 Project CI/CD is set up via vercel check [here](https://vercel.com/omatviiv0/styleagnostic)
 
-# node & npm versions
-project created with node 20 and npm 10
+
+# Testing
+
+## Unit testing
+To avoid accidential importing test data into the build all test data must
+be stored in the `test-data/` folder in the root of the project.
+While tests themselves can be placed anywhere in the `src/` folder where
+its more convenient for the developer but the naming convention for the
+test files is for them to end with `.test.ts` or `.test.tsx`.
+Webpack build is configured in a way that ignores files ending with
+`.test.ts` or `.test.tsx` even if developer accidentally imports from such file.
+
+
 
 # Build setup notes
 Pls refer to [omatviiv/react-template docs](https://github.com/omatviiv/react-template).
@@ -81,3 +92,7 @@ declaration available to typescript. Check `src/type/svg.d.ts`.
 When using suggested resourseQuery method to be able to use svg as url there was
 typescript related issue which was fixed with the help of this
 [question](https://stackoverflow.com/questions/60816666/how-to-use-query-param-import-in-webpack-with-typescript-without-getting-cannot).
+
+
+# node & npm versions
+project created with node 20 and npm 10
