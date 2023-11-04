@@ -13,7 +13,11 @@ Project CI/CD is set up via vercel check [here](https://vercel.com/omatviiv0/sty
 
 ## Unit testing
 To avoid accidential importing test data into the build all test data must
-be stored in the `test-data/` folder in the root of the project.
+be stored in the `testdata` folder in the root of the project. There is webpack
+alias **testdata** for convenience but newer import from testdata in the code
+except test files to ensure testdata newer goes into the prod bundle increasing
+its size.
+
 While tests themselves can be placed anywhere in the `src/` folder where
 its more convenient for the developer but the naming convention for the
 test files is for them to end with `.test.ts` or `.test.tsx`.

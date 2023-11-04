@@ -7,6 +7,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       src: path.resolve(__dirname, '../src/'),
+      testdata: path.resolve(__dirname, '../testdata/'),
     },
   },
   output: {
@@ -38,7 +39,22 @@ module.exports = {
         // its not needed because otherwise imports in test files themselves
         // might stop working
         test: /^.*(?!\.test).{5,5}\.tsx?$/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'ts-loader',
+          },
+          {
+            loader: 'restrict-imports-loader',
+            options: {
+              severity: 'error',
+              rules: [
+                {
+                  restricted: /^[\.\/]*testdata.*$/,
+                },
+              ],
+            },
+          },
+        ],
         exclude: /node_modules/,
         include: [
           path.resolve(__dirname, '../src'),
