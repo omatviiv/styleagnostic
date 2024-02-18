@@ -5,6 +5,7 @@ Theme - collection of simple components and themes for styleagnostic components.
 Simple component - a component that has very small or too simple logic to
 become styleagnostic.
 
+
 # Deploy notes
 Project CI/CD is set up via vercel check [here](https://vercel.com/omatviiv0/styleagnostic)
 
